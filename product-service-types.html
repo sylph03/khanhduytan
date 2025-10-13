@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sản phẩm/ Dịch vụ lắp đặt</title>
+
+  <!-- Front -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend+Deca:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Import CSS files -->
+  <link rel="stylesheet" href="okhub-theme/assets/css/_reset.css">
+  <link rel="stylesheet" href="okhub-theme/assets/css/_variables.css">
+  <link rel="stylesheet" href="okhub-theme/assets/css/global.css">
+
+  <style>
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 40.625rem;
+    }
+
+    @media (max-width: 639.98px) {
+      .banner {
+        height: 24.375rem;
+      }
+    }
+
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .banner__image--desktop {
+      display: block;
+    }
+
+    .banner__image--mobile {
+      display: none;
+    }
+
+    @media (max-width: 639.98px) {
+      .banner__image--desktop {
+        display: none;
+      }
+
+      .banner__image--mobile {
+        display: block;
+      }
+    }
+
+    .banner__title {
+      color: white;
+      width: 59.6875rem;
+      margin-top: 2.31rem;
+    }
+
+    .WEB\/H2\/M {
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%;
+      letter-spacing: 0.01563rem;
+    }
+
+    @media (max-width: 639.98px) {
+      .banner__title {
+        width: 100%;
+        margin-top: 0.625rem;
+        /* APP/H1/MEDIUM */
+        font-family: "Lexend Deca", sans-serif;
+        font-size: 1.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+      }
+    }
+
+    .banner__content {
+      position: absolute;
+      bottom: 6.69rem;
+      left: 3.75rem;
+      z-index: 2;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (max-width: 639.98px) {
+      .banner__content {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 0.75rem 2rem 0.75rem;
+      }
+    }
+
+    .banner__overlay--top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 15.315rem;
+      background: linear-gradient(180deg, rgba(21, 40, 82, 0.50) 0%, rgba(21, 40, 82, 0.00) 58.5%);
+    }
+
+    @media (max-width: 639.98px) {
+      .banner__overlay--top {
+        display: none;
+      }
+    }
+
+    .banner__overlay--bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 14.5rem;
+      background: linear-gradient(180deg, rgba(1, 12, 49, 0.00) 4.78%, #010C31 100%);
+    }
+
+    @media (max-width: 639.98px) {
+      .banner__overlay--bottom {
+        height: 19.375rem;
+      }
+    }
+
+    .breadcrumb {
+      color: #FFF;
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+      letter-spacing: -0.03125rem;
+
+      display: inline-flex;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 639.98px) {
+      .breadcrumb {
+        font-size: 0.75rem;
+        font-weight: 600;
+        line-height: 160%;
+        letter-spacing: 0.01563rem;
+      }
+    }
+
+    .breadcrumb__separator {
+      margin: 0 0.625rem;
+    }
+
+    @media (max-width: 639.98px) {
+      .breadcrumb__separator {
+        margin: 0 0.375rem;
+      }
+    }
+
+    .breadcrumb__link--inactive {
+      opacity: 0.8;
+    }
+
+    @media (max-width: 639.98px) {
+      .breadcrumb__link--inactive {
+        opacity: 0.7;
+      }
+    }
+
+    .breadcrumb__current {
+      color: #FFF;
+      font-weight: 700;
+      opacity: 1;
+    }
+
+    @media (min-width: 1024px) {
+      .breadcrumb a:hover {
+        opacity: 1;
+      }
+    }
+
+    .breadcrumb a:focus {
+      outline: 2px solid rgba(255, 255, 255, 0.5);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 639.98px) {
+      .breadcrumb__current {
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+    }
+
+    /* ------------ */
+
+    .distribution {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.61rem;
+      padding: 0 5.0625rem 4.33244rem 5.0625rem;
+      margin: 5.62rem 0;
+    }
+
+    @media (max-width: 639.98px) {
+      .distribution {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 1.25rem;
+        margin: 2.31rem 0;
+        gap: 0;
+      }
+    }
+
+    .distribution__heading {
+      color: black;
+      align-self: stretch;
+      margin-bottom: 1.56306rem;
+    }
+
+    @media (max-width: 639.98px) {
+      .distribution__heading {
+        padding-top: 0.5rem;
+        color: #454545;
+        margin-bottom: 1.25rem;
+
+        font-family: "Lexend Deca", sans-serif;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        letter-spacing: 0.01563rem;
+      }
+    }
+
+    .distribution__description {
+      color: #161519;
+    }
+
+    @media (max-width: 639.98px) {
+      .distribution__description {
+        margin-bottom: 1.25rem;
+      }
+    }
+
+    .distribution__item {
+      position: relative;
+      width: 100%;
+      /* height: 100%; */
+      aspect-ratio: 28.3125/22.625;
+      box-shadow: 0 3px 40px 1px rgba(214, 214, 221, 0.40);
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    @media (max-width: 639.98px) {
+      .distribution__item {
+        margin-bottom: 1.5rem;
+      }
+
+      .distribution__item:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .distribution__item-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s cubic-bezier(0.74, -0.01, 0.3, 1.01);
+      will-change: transform;
+      transform-origin: center center;
+    }
+
+    @media (min-width: 1024px) {
+      .distribution__item:hover .distribution__item-image {
+        transform: scale(1.23);
+      }
+    }
+
+    .distribution__item-overlay {
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.42);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .distribution__item-title {
+      color: white;
+      z-index: 2;
+      position: absolute;
+      top: 1.87rem;
+      left: 1.81rem;
+      right: 1.81rem;
+    }
+
+    .WEB\/H3\/SEMI {
+      font-size: 2.125rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    @media (max-width: 639.98px) {
+      .distribution__item-title {
+        top: 1.39rem;
+        left: 1.34rem;
+        font-size: 1.375rem;
+      }
+    }
+
+    .distribution__item-viewDetail {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 10.9375rem;
+      height: 3.1875rem;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 639.98px) {
+      .distribution__item-viewDetail {
+        width: 8.06431rem;
+        height: 2.35019rem;
+      }
+    }
+
+    .distribution__item-viewDetail-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    .distribution__item-viewDetail-content {
+      position: absolute;
+      bottom: 0.75rem;
+      right: 1.06rem;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    @media (max-width: 639.98px) {
+      .distribution__item-viewDetail-content {
+        bottom: 0.48rem;
+        right: 0.45rem;
+      }
+    }
+
+    .distribution__item-viewDetail-content p {
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 0.03763rem;
+      margin-right: 0.56431rem;
+    }
+
+    @media (max-width: 639.98px) {
+      .distribution__item-viewDetail-content p {
+        font-size: 0.875rem;
+        font-weight: 600;
+        line-height: 160%;
+        letter-spacing: 0.03125rem;
+      }
+    }
+
+    .distribution__item-viewDetail-content img {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    @media (max-width: 639.98px) {
+      .distribution__item-viewDetail-content img {
+        width: 0.875rem;
+        height: 0.875rem;
+      }
+    }
+
+    /* ------------ */
+
+    .contact {
+      padding: 0 5.0625rem 7.87rem 5.0625rem;
+      width: 100%;
+    }
+
+    @media (max-width: 639.98px) {
+      .contact {
+        padding: 0 1.25rem 6rem 1.25rem;
+      }
+    }
+
+    .contact__container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    @media (max-width: 639.98px) {
+      .contact__container {
+        flex-direction: row;
+        width: 100%;
+      }
+    }
+
+    .contact__body {
+      height: 27.06rem;
+      width: 100%;
+      background: #0D1F45;
+    }
+
+    @media (max-width: 639.98px) {
+      .contact__body {
+        height: 43.9375rem;
+      }
+    }
+
+    .contact__content {
+      position: absolute;
+      top: 2.91rem;
+      left: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 6.69rem 0 5.12rem;
+      background: transparent;
+      width: 100%;
+    }
+
+    @media (max-width: 639.98px) {
+      .contact__content {
+        grid-template-columns: 1fr;
+        padding: 0 1.19rem;
+        top: 2rem;
+      }
+    }
+
+    .contact__overlay {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: -0.14rem;
+    }
+
+    .contact__overlay--mobile {
+      display: none;
+      margin-right: -0.2rem;
+      height: 43.9375rem;
+    }
+
+    @media (max-width: 639.98px) {
+      .contact__overlay {
+        display: none;
+      }
+
+      .contact__overlay--mobile {
+        display: block;
+      }
+    }
+
+    .contact__icon {
+      position: absolute;
+      bottom: -0.1rem;
+      right: -0.1rem;
+      width: 6.00963rem;
+      height: 6.07231rem;
+    }
+
+    .contact__icon--mobile {
+      display: none;
+    }
+
+    @media (max-width: 639.98px) {
+      .contact__icon {
+        display: none;
+      }
+
+      .contact__icon--mobile {
+        display: block;
+        position: absolute;
+        top: -0.1rem;
+        right: -0.1rem;
+        width: 3.91575rem;
+        height: 3.74488rem;
+      }
+    }
+
+    .contact__left {
+      width: 35.4375rem;
+      display: flex;
+      flex-direction: column;
+      padding-top: 3.84rem;
+    }
+
+    @media (max-width: 639.98px) {
+      .contact__left {
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    .contact__left p {
+      margin-bottom: 1.9375rem;
+    }
+
+    @media (max-width: 639.98px) {
+      .contact__left p {
+        margin-bottom: 1rem;
+        font-size: 0.875rem;
+      }
+    }
+
+    .contact__left p,
+    .contact__left h2 {
+      align-self: stretch;
+      color: white;
+    }
+
+    @media (max-width: 639.98px) {
+      .contact__left h2 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 120%;
+        letter-spacing: 0.01563rem;
+      }
+    }
+
+    .WEB\/H2\/L {
+      -webkit-text-stroke-width: 1.05px;
+      -webkit-text-stroke-color: #FFF;
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 140%;
+    }
+
+    .contact__right {
+      padding: 0 0 2.88rem 1.25rem;
+    }
+
+    @media (max-width: 639.98px) {
+      .contact__right {
+        padding: 3.31rem 0 3.94rem 0;
+        width: 100%;
+      }
+    }
+
+    .contact__form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (max-width: 639.98px) {
+      .contact__form {
+        height: 26.875rem;
+        justify-content: space-between;
+      }
+    }
+
+    .contact__input {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.88rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact__input input,
+    .contact__input select {
+      height: 3.5rem;
+    }
+
+    .contact__input textarea {
+      height: 5.25rem;
+    }
+
+    @media (max-width: 639.98px) {
+      .contact__input textarea {
+        height: 4.125rem;
+      }
+    }
+
+    .contact__input input,
+    .contact__input select,
+    .contact__input textarea {
+      padding: 0.75rem 1.25rem;
+      background: rgba(118, 154, 180, 0.16);
+      border: 0;
+      outline: none;
+      width: 100%;
+      /* border-radius: 0.5rem; */
+
+      color: #FFF;
+      font-family: "Inter", sans-serif;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.5rem;
+    }
+
+    /* Select dropdown icon */
+    .contact__input select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      padding-right: 3.5rem;
+      background-image: url("images/product-services/arrow-down.webp");
+      background-position: right 1.25rem center;
+      background-repeat: no-repeat;
+      background-size: 1.5rem;
+    }
+
+    /* Select option styling */
+    .contact__input select option {
+      background: #0D1F45;
+      color: #FFF;
+      font-family: "Inter", sans-serif;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.5rem;
+      padding: 0.75rem 1.25rem;
+    }
+
+    .contact__input input::placeholder,
+    .contact__input select::placeholder,
+    .contact__input textarea::placeholder {
+      color: rgba(255, 255, 255, 0.49);
+      font-family: "Manrope", sans-serif;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%;
+      letter-spacing: 0.03125rem;
+    }
+
+    @media (max-width: 639.98px) {
+
+      .contact__input input::placeholder,
+      .contact__input select::placeholder,
+      .contact__input textarea::placeholder {
+        font-size: 0.875rem;
+        letter-spacing: 0;
+      }
+    }
+
+    /* Hàng 2 cột: SĐT và Email */
+    .contact__row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.88rem;
+    }
+
+    .contact__button {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 10.8125rem;
+      height: 3rem;
+      padding: 1rem 2.0625rem;
+      flex-shrink: 0;
+      background: rgba(250, 204, 21, 0.00);
+      border: 0;
+      color: white;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: background 0.4s Ease out;
+    }
+
+    @media (min-width: 1024px) {
+      .contact__button:hover {
+        background: #1c469a;
+      }
+
+      .contact__button:hover .contact__button-frame {
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 639.98px) {
+      .contact__button {
+        width: 100%;
+      }
+    }
+
+    .contact__button-frame {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .contact__button-icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0.8125rem;
+      height: 0.875rem;
+      object-fit: contain;
+    }
+  </style>
+
+</head>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const products = [
+      { img: 'images/product-services/system-light.webp', title: 'Hệ thống chiếu sáng' },
+      { img: 'images/product-services/electric-cable.webp', title: 'Dây cáp điện' },
+      { img: 'images/product-services/device-auto.webp', title: 'Thiết bị tự động hóa đo đếm' },
+      { img: 'images/product-services/device-medium.webp', title: 'Thiết bị trung thế' },
+      { img: 'images/product-services/services.webp', title: 'Dịch vụ tư vấn lắp đặt' },
+    ];
+
+    const listEl = document.getElementById('distribution-list');
+    if (!listEl) return;
+
+    const makeItem = ({ img, title }) => {
+      const wrap = document.createElement('div');
+      wrap.className = 'distribution__item';
+      wrap.innerHTML = `
+        <img class="distribution__item-image" src="${img}" alt="${title}">
+        <div class="distribution__item-overlay"></div>
+        <h3 class="distribution__item-title WEB/H3/SEMI font-lexend">${title}</h3>
+        <a href="#" class="distribution__item-viewDetail">
+          <img class="distribution__item-viewDetail-image" src="images/product-services/bg-viewdetail.webp" alt="View Detail">
+          <div class="distribution__item-viewDetail-content">
+            <p class="Foundation-Blue-Normal font-manrope">Xem chi tiết</p>
+            <img data-no-lazy="1" src="images/product-services/arrow-right.webp" alt="Arrow Right">
+          </div>
+        </a>
+      `;
+      return wrap;
+    };
+
+    products.forEach(p => listEl.appendChild(makeItem(p)));
+  });
+</script>
+
+<body>
+  <section class="banner">
+
+    <img class="banner__image--desktop" src="images/product-services/bg-banner.webp" alt="Banner">
+    <img class="banner__image--mobile" src="images/product-services/bg-banner-mb.webp" alt="Banner">
+
+    <div class="banner__content">
+      <nav class="breadcrumb font-manrope" aria-label="Breadcrumb">
+        <a href="#" class="breadcrumb__link--inactive">Trang chủ</a>
+        <span class="breadcrumb__separator" aria-hidden="true">/</span>
+        <span class="breadcrumb__current" aria-current="page">Sản phẩm, dịch vụ</span>
+      </nav>
+      <h2 class="banner__title WEB/H2/M font-lexend">
+        SẢN PHẨM CUNG CẤP, <br> VẬN HÀNH
+      </h2>
+    </div>
+
+    <!-- overlay -->
+    <div class="banner__overlay--top"></div>
+    <div class="banner__overlay--bottom"></div>
+
+  </section>
+
+  <section class="distribution" id="distribution-list">
+    <div>
+      <h2 class="distribution__heading font-lexend WEB/H2/R">
+        Loại sản phẩm phân phối
+      </h2>
+      <p class="distribution__description WEB/Body/16/16-R font-manrope">
+        Khánh Duy Tân luôn cam kết cung cấp sản phẩm điện phù hợp cho mọi công trình, từ nhà ở đến khu công nghiệp,
+        đảm bảo hiệu suất và tiết kiệm năng lượng với đa dạng mẫu mã sản phẩm
+      </p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="contact__container">
+      <img data-no-lazy="1" class="contact__overlay" src="images/product-services/form-overlay.webp" alt="Form Overlay">
+      <img data-no-lazy="1" class="contact__overlay--mobile" src="images/product-services/form-overlay-mb.webp" alt="Form Overlay">
+
+      <div class="contact__body"></div>
+      <img data-no-lazy="1" class="contact__icon" src="images/product-services/polygon.webp" alt="Polygon Icon">
+      <img data-no-lazy="1" class="contact__icon--mobile" src="images/product-services/polygon-mb.webp" alt="Polygon Icon">
+
+      <div class="contact__content">
+
+        <div class="contact__left">
+          <p class="WEB/Body/16/16-Semi font-manrope">
+            LIÊN HỆ VỚI CHÚNG TÔI
+          </p>
+          <h2 class="WEB/H2/L font-lexend">
+            Hãy để Khánh Duy Tân tư vấn sản phẩm cho dự án của bạn.
+          </h2>
+        </div>
+
+        <div class="contact__right">
+          <form action="" class="contact__form">
+            <div class="contact__input">
+              <input type="text" placeholder="Họ và tên">
+              <div class="contact__row">
+                <input type="tel" placeholder="Số điện thoại">
+                <input type="email" placeholder="Gmail">
+              </div>
+              <select id="consultType" name="consultType">
+                <option value="service">Nhu cầu tư vấn: Thiết bị điện công nghiệp</option>
+                <option value="consultation">Nhu cầu tư vấn: Hệ thống điện</option>
+                <option value="installation">Nhu cầu tư vấn: Lắp đặt thiết bị</option>
+              </select>
+              <select id="consultTime" name="consultTime">
+                <option value="morning">Khung giờ cần tư vấn: 7:30 - 12:00</option>
+                <option value="afternoon">Khung giờ cần tư vấn: 13:00 - 17:30</option>
+              </select>
+              <textarea rows="3" placeholder="Nhập yêu cầu chi tiết"></textarea>
+            </div>
+            <button class="contact__button Button/14-sm font-lexend">
+              GỬI THÔNG TIN
+              <img data-no-lazy="1" class="contact__button-frame" src="images/product-services/button-frame.webp" alt="Frame Button">
+              <img data-no-lazy="1" class="contact__button-icon" src="images/product-services/button-icon.webp" alt="Button Icon">
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

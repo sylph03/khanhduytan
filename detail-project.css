@@ -1,0 +1,1185 @@
+/* Averta Std Cy Font Family */
+@font-face {
+  font-family: 'Averta Std Cy';
+  src: url('Font Averta Std Cy - MBBank/Intelligent Design - AvertaStdCY-Regular_3.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta Std Cy';
+  src: url('Font Averta Std Cy - MBBank/Intelligent Design - AvertaStdCY-RegularItalic_1.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta Std Cy';
+  src: url('Font Averta Std Cy - MBBank/Intelligent Design - AvertaStdCY-Light_1.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta Std Cy';
+  src: url('Font Averta Std Cy - MBBank/Intelligent Design - AvertaStdCY-LightItalic_1.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta Std Cy';
+  src: url('Font Averta Std Cy - MBBank/Intelligent Design - AvertaStdCY-Medium_1.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta Std Cy';
+  src: url('Font Averta Std Cy - MBBank/Intelligent Design - AvertaStdCY-MediumItalic_1.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta Std Cy';
+  src: url('Font Averta Std Cy - MBBank/Intelligent Design - AvertaStdCY-Semibold_1.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta Std Cy';
+  src: url('Font Averta Std Cy - MBBank/Intelligent Design - AvertaStdCY-SemiboldItalic_1.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta Std Cy';
+  src: url('Font Averta Std Cy - MBBank/Intelligent Design - AvertaStdCY-Bold_1.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta Std Cy';
+  src: url('Font Averta Std Cy - MBBank/Intelligent Design - AvertaStdCY-BoldItalic_1.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta Std Cy';
+  src: url('Font Averta Std Cy - MBBank/Intelligent Design - AvertaStdCY-Extrabold_1.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta Std Cy';
+  src: url('Font Averta Std Cy - MBBank/Intelligent Design - AvertaStdCY-ExtraboldItalic_1.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta Std Cy';
+  src: url('Font Averta Std Cy - MBBank/Intelligent Design - AvertaStdCY-Black_1.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta Std Cy';
+  src: url('Font Averta Std Cy - MBBank/Intelligent Design - AvertaStdCY-BlackItalic_1.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta Std Cy';
+  src: url('Font Averta Std Cy - MBBank/Intelligent Design - AvertaStdCy-Extrathin_1.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta Std Cy';
+  src: url('Font Averta Std Cy - MBBank/Intelligent Design - AvertaStdCy-ExtrathinItalic_1.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta Std Cy';
+  src: url('Font Averta Std Cy - MBBank/Intelligent Design - AvertaStdCY-Thin_1.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta Std Cy';
+  src: url('Font Averta Std Cy - MBBank/Intelligent Design - AvertaStdCY-ThinItalic_1.otf') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Utility class for Averta font */
+.font-averta {
+  font-family: 'Averta Std Cy', sans-serif;
+}
+
+.detail-project {
+  background: #F7F7F7;
+}
+
+.banner {
+  width: 100%;
+  aspect-ratio: 100/40.625;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.banner__content {
+  position: absolute;
+  bottom: 4.37rem;
+  left: 8.75rem;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.breadcrumb {
+  color: #FFF;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.03125rem;
+
+  display: inline-flex;
+  align-items: flex-start;
+}
+
+.breadcrumb__separator {
+  margin: 0 0.625rem;
+}
+
+.breadcrumb__link--inactive {
+  opacity: 0.8;
+}
+
+.breadcrumb__current {
+  color: #FFF;
+  font-weight: 700;
+  opacity: 1;
+}
+
+.breadcrumb a:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.banner__image--desktop {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner__image--mobile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.banner__overlay-top {
+  position: absolute;
+  top: -5.37rem;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 100.125/14.5;
+  /* background: linear-gradient(180deg, rgba(1, 12, 49, 0.00) 4.78%, #010C31 100%); */
+  background: linear-gradient(0deg, rgba(1, 12, 49, 0.00) 4.78%, #010C31 100%);
+}
+
+.banner__overlay-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 100.125/25.5625;
+  background: linear-gradient(180deg, rgba(1, 12, 49, 0.00) 4.78%, #010C31 100%);
+}
+
+.banner-title {
+  width: 59.6875rem;
+  margin-top: 1.69rem;
+
+  color: #FFF;
+
+  /* WEB/H1/SEMI */
+  font-family: "Lexend Deca";
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  text-transform: capitalize;
+}
+
+/* ----------------------------------- */
+
+.project-info {
+  display: grid;
+  grid-template-columns: 39% 47.56%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 9rem 6rem 9rem;
+}
+
+.project-info-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.project-info-left-badge {
+  display: flex;
+  padding: 0.5rem 0.75rem;
+  justify-content: center;
+  align-items: center;
+  background: #E2ECFF;
+}
+
+.project-info-left-badge-text {
+  color: var(--Foundation-Blue-Normal, #1C469A);
+
+  font-family: Manrope;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1rem;
+  letter-spacing: 0.025rem;
+}
+
+.project-info-left-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+
+  margin-top: 1.12rem;
+}
+
+.project-info-left-content-title {
+  color: #000;
+
+  /* WEB/H2/M */
+  font-family: "Lexend Deca";
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: 0.01563rem;
+
+  margin-bottom: 1rem;
+}
+
+.project-info-left-content-description {
+  align-self: stretch;
+  color: var(--text-body-60, rgba(46, 46, 46, 0.60));
+  font-family: Manrope;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.project-info-right {
+  display: flex;
+  /* padding-right: 7.6875rem; */
+  flex-direction: column;
+}
+
+.project-info-right-line {
+  border-top: 1px solid #E7E7E7;
+  /* width: 31.3125rem; */
+  width: 80.3%;
+  margin-bottom: 1.5rem;
+}
+
+.project-info-right-line:last-child {
+  margin-bottom: 0;
+}
+
+.project-info-right-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.56rem;
+}
+
+.project-info-right-item-label {
+  color: rgba(46, 46, 46, 0.75);
+  font-family: Manrope;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.00938rem;
+}
+
+.project-info-right-item-value {
+  color: var(--Text-Body-T1, #2E2E2E);
+  text-align: right;
+  font-family: Manrope;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* ----------------------------------- */
+
+.project-detail {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  height: 100%;
+  padding: 0 9rem 5rem 9rem;
+  align-items: center;
+  align-self: stretch;
+  gap: 2.5rem;
+}
+
+.project-detail>p {
+  align-self: stretch;
+  color: var(--Text-Body-T1, #2E2E2E);
+  font-family: Manrope;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.project-detail-gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-start;
+  gap: 1.41269rem;
+}
+
+.project-detail-gallery>img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.project-detail-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-self: stretch;
+  gap: 2.5rem;
+}
+
+.project-detail-content-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: flex-start;
+  gap: 1rem;
+  align-self: stretch;
+}
+
+.project-detail-content-item>h4 {
+  align-self: stretch;
+  color: var(--foundation-blue-dark-hover, #112A5C);
+  font-family: "Lexend Deca";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.00938rem;
+}
+
+.project-detail-content-item>img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.project-detail-content-item>p {
+  align-self: stretch;
+  color: var(--text-body-75, rgba(46, 46, 46, 0.75));
+  font-family: Manrope;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 0.03125rem;
+}
+
+.project-detail-content-item>p>strong {
+  color: var(--Text-Body-T1, #2E2E2E);
+
+  font-style: normal;
+  font-weight: 700;
+}
+
+.project-detail-content-link {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 1.125rem;
+}
+
+.project-detail-content-line {
+  width: 100%;
+  border-radius: 1.5625rem;
+  border: 1.563px solid var(--Stroke-1, #D2D2D7);
+}
+
+.project-detail-content-link-tagandshare {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.project-detail-content-link-tagandshare__tag {
+  display: flex;
+  align-items: center;
+}
+
+.project-detail-content-link-tagandshare__tag-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.project-detail-content-link-tagandshare__tag-item {
+  display: flex;
+  padding: 0.5rem 0.75rem;
+  justify-content: center;
+  align-items: center;
+  background: #E2ECFF;
+  margin-right: 0.875rem;
+}
+
+.project-detail-content-link-tagandshare__tag-item:last-child {
+  margin-right: 0;
+}
+
+.project-detail-content-link-tagandshare__tag-item-text {
+  color: #1C469A;
+  font-family: Manrope;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1rem;
+  letter-spacing: 0.025rem;
+}
+
+.project-detail-content-link-tagandshare__tag-text {
+  color: var(--Foundation-Blue-Darker, #0A1936);
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: var(--Family-Typography-All-family, "Averta Std CY");
+  font-size: var(--Family-Size-16, 1rem);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.3125rem;
+
+  margin-right: 1rem;
+}
+
+.project-detail-content-link-tagandshare__share {
+  display: flex;
+  align-items: center;
+}
+
+.project-detail-content-link-tagandshare__share-text {
+  color: var(--Foundation-Blue-Normal, #1C469A);
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: "Averta Std CY";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: -0.03125rem;
+}
+
+.project-detail-content-link-tagandshare__share-list {
+  display: flex;
+  align-items: center;
+}
+
+.project-detail-content-link-tagandshare__link {
+  width: 2.5rem;
+  height: 2.5rem;
+  stroke-width: 1.333px;
+  stroke: var(--Foundation-Blue-Normal, #1C469A);
+  margin-left: 1rem;
+}
+
+.project-detail-content-link-tagandshare__link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ----------------------------------- */
+
+.project-related {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  height: 100%;
+  gap: 3rem;
+  padding: 0 5rem 1.32rem 5rem;
+  position: relative;
+}
+
+.project-related-header {
+  display: flex;
+  width: 100%;
+  height: 3.625rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-related-title {
+  color: var(--Text-Body-T1, #2E2E2E);
+
+  font-family: "Lexend Deca";
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.01563rem;
+}
+
+.project-related-viewall {
+  width: 10.9375rem;
+  height: 2.9375rem;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.project-related-viewall-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-related-viewall-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.8125rem;
+  height: 0.875rem;
+}
+
+.project-related-viewall-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 10.8125rem;
+  height: 3rem;
+  padding: 1rem 2.0625rem;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background: rgba(250, 204, 21, 0.00);
+
+  color: #FFF;
+  font-family: "Lexend Deca";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5rem;
+  letter-spacing: 0.00938rem;
+}
+
+.project-related-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  overflow: hidden;
+}
+
+.project-related-item {
+  /* width: 23.9%; */
+  width: 100%;
+  aspect-ratio: 21.5/30.5;
+  background: #FFF;
+  box-shadow: 122.874px 299.569px 90.378px 0 rgba(220, 220, 229, 0.00), 79.208px 191.927px 83.27px 0 rgba(220, 220, 229, 0.01), 44.681px 107.642px 70.069px 0 rgba(220, 220, 229, 0.05), 19.294px 47.728px 51.79px 0 rgba(220, 220, 229, 0.09), 5.077px 12.186px 28.434px 0 rgba(220, 220, 229, 0.10);
+  position: relative;
+}
+
+.project-related-item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.project-related-item-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: auto;
+  opacity: 0;
+  transition: width 0.5s cubic-bezier(0.89, 0.03, 0.2, 0.96), opacity 0.3s ease;
+}
+
+.project-related-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem 1.38rem 1rem 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.project-related-item-header-number {
+  color: #1C469A;
+  font-family: "Lexend Deca";
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0.01563rem;
+}
+
+.project-related-item-header-label {
+  width: 3.9375rem;
+  height: 2.4375rem;
+  flex-shrink: 0;
+  color: #929292;
+  text-align: right;
+  font-family: Manrope;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1rem;
+  letter-spacing: 0.025rem;
+}
+
+.project-related-item-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 0rem 1.38rem 1rem 1.38rem;
+  position: relative;
+  z-index: 2;
+}
+
+.project-related-item-line {
+  width: 100%;
+  height: 0.06344rem;
+  opacity: 0.1;
+  background: #272727;
+}
+
+.project-related-item-body-content {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  align-items: flex-start;
+  gap: 0.875rem;
+}
+
+.project-related-item-body-content-title {
+  align-self: stretch;
+  color: #2E2E2E;
+  font-family: "Lexend Deca";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.00938rem;
+}
+
+.project-related-item-body-content-description {
+  height: 3.125rem;
+  align-self: stretch;
+
+  overflow: hidden;
+  color: #7D7D7D;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  font-family: Manrope;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.project-related-item-button {
+  display: inline-flex;
+  height: 2rem;
+  padding: var(--4, 0.25rem) 0.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Button-gap, 0.5rem);
+  flex-shrink: 0;
+  background: #FFF;
+  margin-left: 0.62rem;
+  position: relative;
+  z-index: 2;
+}
+
+.project-related-item-button p {
+  color: #1C469A;
+  font-family: "Lexend Deca";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5rem;
+  letter-spacing: 0.00938rem;
+}
+
+.project-related-item-button img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.project-related-item-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 21.51563/13.087;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.project-related-pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.project-related-pagination {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.project-related-pagination .swiper-pagination-bullet {
+  width: 0.64563rem;
+  height: 0.68244rem;
+  flex-shrink: 0;
+  border-radius: 4.17563rem;
+  background: rgba(132, 132, 132, 0.30);
+  opacity: 1;
+  margin: 0 0.25rem;
+}
+
+.project-related-pagination .swiper-pagination-bullet:first-child {
+  margin-left: 0;
+}
+
+.project-related-pagination .swiper-pagination-bullet:last-child {
+  margin-right: 0;
+}
+
+.project-related-pagination .swiper-pagination-bullet-active {
+  width: 2.95438rem;
+  height: 0.68244rem;
+  flex-shrink: 0;
+  border-radius: 0.25rem;
+  background: var(--Foundation-Blue-Normal, #1C469A);
+}
+
+.project-related-button {
+  position: absolute;
+  top: 16.625rem;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  width: 98.25%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-related-button-prev {
+  width: 3.5rem;
+  height: 3.5rem;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.project-related-button-prev img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-related-button-next {
+  width: 3.5rem;
+  height: 3.5rem;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.project-related-button-next img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  width: 100%;
+  overflow: visible;
+}
+
+/* --------------------------------------- */
+
+.project-related-mobile {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.project-related-mobile-button {
+  width: 15.3125rem;
+  height: 3.0625rem;
+  position: relative;
+}
+
+.project-related-mobile-button-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-related-mobile-button-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.9375rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.project-related-mobile-button-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 15.1875rem;
+  padding: 1rem 2.0625rem;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background: rgba(250, 204, 21, 0.00);
+
+  color: #FFF;
+  font-family: "Lexend Deca";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5rem;
+  letter-spacing: 0.00938rem;
+}
+
+.project-related-mobile-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.project-related-mobile-content-title {
+  display: flex;
+  padding: 0 1.1875rem;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.project-related-mobile-content-title-text {
+  color: #1D1D1D;
+  font-family: "Lexend Deca";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.01563rem;
+}
+
+.project-related-mobile-content-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  overflow: hidden;
+}
+
+.project-related-mobile-content-list {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  padding: 0 1.09375rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.project-related-mobile-content-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* ======================================== */
+/* MOBILE STYLES
+/* ======================================== */
+
+@media (max-width: 639.98px) {
+  .banner {
+    aspect-ratio: 23.4375/24.375;
+  }
+
+  .banner__content {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 0 0.75rem 2rem 0.75rem;
+  }
+
+  .breadcrumb {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 160%;
+    letter-spacing: 0.01563rem;
+  }
+
+  .breadcrumb__separator {
+    margin: 0 0.375rem;
+  }
+
+  .breadcrumb__link--inactive {
+    opacity: 0.7;
+  }
+
+  .breadcrumb__current {
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .banner__image--desktop {
+    display: none;
+  }
+
+  .banner__image--mobile {
+    display: block;
+  }
+
+  .banner__overlay-top {
+    top: -11.56rem;
+    aspect-ratio: 25.125/19.375;
+  }
+
+  .banner__overlay-bottom {
+    aspect-ratio: 25.125/19.375;
+    background: linear-gradient(180deg, rgba(1, 12, 49, 0.00) 22.9%, #010C31 125.65%);
+  }
+
+  .banner-title {
+    width: 100%;
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-top: 0.625rem;
+  }
+
+  .project-info {
+    padding: 1.5rem 1.25rem 2rem 1.25rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-info-left-content-title {
+    font-size: 1.5rem;
+    line-height: 120%;
+    letter-spacing: 0.01563rem;
+  }
+
+  .project-info-left-content-description {
+    font-size: 1rem;
+  }
+
+  .project-info-right-line {
+    width: 100%;
+  }
+
+  .project-info-right-item-label {
+    font-size: 0.875rem;
+    line-height: 160%;
+    letter-spacing: 0.03125rem;
+  }
+
+  .project-info-right-item-value {
+    font-size: 0.875rem;
+    letter-spacing: 0.00938rem;
+  }
+
+  .project-detail {
+    padding: 0 1.25rem 2.5rem 1.25rem;
+    gap: 1rem;
+  }
+
+  .project-detail>p {
+    font-size: 1rem;
+    line-height: 160%;
+    letter-spacing: 0.03125rem;
+  }
+
+  .project-detail-gallery {
+    gap: 0.12088rem;
+  }
+
+  .project-detail-content {
+    gap: 1.5rem;
+  }
+
+  .project-detail-content-item>h4 {
+    font-size: 1.125rem;
+  }
+
+  .project-detail-content-item>p {
+    font-size: 0.875rem;
+  }
+
+  .project-detail-content-link-tagandshare {
+    flex-direction: column-reverse;
+    padding-top: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .project-detail-content-link-tagandshare__tag-item {
+    padding: 0.25rem 0.75rem;
+  }
+
+  .project-detail-content-link-tagandshare__tag-text {
+    color: var(--Foundation-Blue-Normal, #1C469A);
+    font-size: 0.75rem;
+    line-height: 160%;
+    letter-spacing: 0.01563rem;
+  }
+
+  .project-detail-content-link-tagandshare__share {
+    margin-bottom: 1rem;
+  }
+
+  .project-detail-content-link-tagandshare__share-text {
+    font-size: 0.75rem;
+    line-height: 160%;
+    letter-spacing: 0.01563rem;
+  }
+
+  .project-detail-content-link-tagandshare__link {
+    width: 2rem;
+    height: 2rem;
+    stroke-width: 1.067px;
+  }
+
+  .project-related {
+    display: none;
+  }
+
+  .project-related-item {
+    width: 16.4375rem;
+    height: 26rem;
+    box-shadow: 93.873px 228.864px 69.047px 0 rgba(220, 220, 229, 0.00), 60.513px 146.628px 63.617px 0 rgba(220, 220, 229, 0.01), 34.136px 82.236px 53.531px 0 rgba(220, 220, 229, 0.05), 14.74px 36.463px 39.566px 0 rgba(220, 220, 229, 0.09), 3.879px 9.31px 21.723px 0 rgba(220, 220, 229, 0.10);
+    margin-right: 1.5625rem;
+  }
+
+  .project-related-item:last-child {
+    margin-right: 0;
+  }
+
+  .project-related-item-header {
+    padding: 1rem;
+  }
+
+  .project-related-item-header-number {
+    font-size: 2.25rem;
+    letter-spacing: 0.01106rem;
+  }
+
+  .project-related-item-header-label {
+    width: 3.00819rem;
+    height: 1.86219rem;
+    line-height: 140%;
+    letter-spacing: 0.01913rem;
+  }
+
+  .project-related-item-line {
+    height: 0.0485rem;
+  }
+
+  .project-related-item-body-content {
+    gap: 0.75rem;
+  }
+
+  .project-related-item-body-content-description {
+    font-size: 0.75rem;
+    letter-spacing: 0.01563rem;
+  }
+
+  .project-related-mobile {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .breadcrumb a:hover {
+    opacity: 1;
+  }
+
+  .project-related-item:hover {
+    .project-related-item-icon {
+      width: 2.625rem;
+      opacity: 1;
+    }
+  }
+}
