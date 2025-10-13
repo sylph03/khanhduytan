@@ -143,11 +143,6 @@
   font-display: swap;
 }
 
-/* Utility class for Averta font */
-.font-averta {
-  font-family: 'Averta Std Cy', sans-serif;
-}
-
 .detail-project {
   background: #F7F7F7;
 }
@@ -965,9 +960,7 @@
   display: none;
 }
 
-/* ======================================== */
-/* MOBILE STYLES
-/* ======================================== */
+/* ------------------------------------------mobile------------------------------------------ */
 
 @media (max-width: 639.98px) {
   .banner {
@@ -1175,8 +1168,7 @@
   }
 }
 
-/* ======================================== */
-/* TABLET STYLES */
+/* ------------------------------------------tablet------------------------------------------ */
 
 @media (min-width: 1024px) {
   .breadcrumb a:hover {
