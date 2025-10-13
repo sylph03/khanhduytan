@@ -76,14 +76,9 @@
     }
   ];
 
-  // Hàm render danh sách dự án cho desktop
-  function renderRelatedProjects() {
-    const wrapper = document.getElementById('project-related-wrapper');
-
-    if (!wrapper) return;
-
-    const html = relatedProjects.map(project => `
-      <div class="swiper-slide">
+  // Template thẻ dự án dùng chung (desktop & mobile)
+  function renderProjectCard(project) {
+    return `
         <div class="project-related-item">
           <img class="project-related-item-overlay" src="images/detail-project/overlay-item.webp" alt="Image">
           <img class="project-related-item-icon" src="images/detail-project/item-icon.webp" alt="polygon icon">
@@ -110,7 +105,17 @@
           </a>
           <img class="project-related-item-image" src="${project.image}" alt="Image">
         </div>
-      </div>
+    `;
+  }
+
+  // Hàm render danh sách dự án cho desktop
+  function renderRelatedProjects() {
+    const wrapper = document.getElementById('project-related-wrapper');
+
+    if (!wrapper) return;
+
+    const html = relatedProjects.map(project => `
+      <div class="swiper-slide">${renderProjectCard(project)}</div>
     `).join('');
 
     wrapper.innerHTML = html;
@@ -122,34 +127,7 @@
 
     if (!mobileWrapper) return;
 
-    const html = relatedProjects.map(project => `
-      <div class="project-related-item">
-        <img class="project-related-item-overlay" src="images/detail-project/overlay-item.webp" alt="Image">
-        <img class="project-related-item-icon" src="images/detail-project/item-icon.webp" alt="polygon icon">
-        <div class="project-related-item-header">
-          <h2 class="project-related-item-header-number">${project.number}</h2>
-          <p class="project-related-item-header-label">
-            ${project.label}
-          </p>
-        </div>
-        <div class="project-related-item-body">
-          <div class="project-related-item-line"></div>
-          <div class="project-related-item-body-content">
-            <h5 class="project-related-item-body-content-title">
-              ${project.title}
-            </h5>
-            <p class="project-related-item-body-content-description">
-              ${project.description}
-            </p>
-          </div>
-        </div>
-        <a href="${project.link}" class="project-related-item-button">
-          <p>Chi tiết dự án</p>
-          <img src="images/detail-project/arrow-right.webp" alt="Button">
-        </a>
-        <img class="project-related-item-image" src="${project.image}" alt="Image">
-      </div>
-    `).join('');
+    const html = relatedProjects.map(project => renderProjectCard(project)).join('');
 
     mobileWrapper.innerHTML = html;
   }
