@@ -317,20 +317,16 @@
 }
 
 .project-info-right {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   /* padding-right: 7.6875rem; */
-  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .project-info-right-line {
   border-top: 1px solid #E7E7E7;
   /* width: 31.3125rem; */
   width: 80.3%;
-  margin-bottom: 1.5rem;
-}
-
-.project-info-right-line:last-child {
-  margin-bottom: 0;
 }
 
 .project-info-right-item {
@@ -338,7 +334,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.56rem;
 }
 
 .project-info-right-item-label {
@@ -1031,6 +1026,8 @@
     margin-top: 0.625rem;
   }
 
+  /* ------------------ */
+
   .project-info {
     padding: 1.5rem 1.25rem 2rem 1.25rem;
     grid-template-columns: 1fr;
@@ -1122,6 +1119,8 @@
     stroke-width: 1.067px;
   }
 
+  /* ------------------ */
+
   .project-related {
     display: none;
   }
@@ -1153,6 +1152,11 @@
     letter-spacing: 0.01913rem;
   }
 
+  .project-related-item-body {
+    padding: 0rem 1rem 0.3rem 1rem;
+    gap: 0.75rem;
+  }
+
   .project-related-item-line {
     height: 0.0485rem;
   }
@@ -1170,6 +1174,9 @@
     display: flex;
   }
 }
+
+/* ======================================== */
+/* TABLET STYLES */
 
 @media (min-width: 1024px) {
   .breadcrumb a:hover {
