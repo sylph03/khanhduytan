@@ -211,8 +211,9 @@
 
 .banner__overlay-top {
   position: absolute;
-  top: -5.37rem;
+  top: 0;
   left: 0;
+  transform: translateY(-37%);
   width: 100%;
   aspect-ratio: 100.125/14.5;
   /* background: linear-gradient(180deg, rgba(1, 12, 49, 0.00) 4.78%, #010C31 100%); */
