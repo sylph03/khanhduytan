@@ -1004,7 +1004,7 @@
   }
 
   .banner__overlay-top {
-    top: -11.56rem;
+    transform: translateY(-60%);
     aspect-ratio: 25.125/19.375;
   }
 
