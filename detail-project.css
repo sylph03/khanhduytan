@@ -632,6 +632,15 @@
   position: relative;
 }
 
+.project-related-item-image--hover {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  aspect-ratio: 21.51563/13.087;
+  opacity: 0;
+  transition: opacity cubic-bezier(0.88, 0, 0.26, 0.98) 0.5s;
+}
+
 .project-related-item-overlay {
   position: absolute;
   top: 0;
@@ -648,7 +657,7 @@
   width: 0;
   height: auto;
   opacity: 0;
-  transition: width 0.5s cubic-bezier(0.89, 0.03, 0.2, 0.96), opacity 0.3s ease;
+  transition: all 0.6s cubic-bezier(0.89, 0.03, 0.2, 0.96);
 }
 
 .project-related-item-header {
@@ -772,6 +781,7 @@
   aspect-ratio: 21.51563/13.087;
   object-fit: cover;
   z-index: 1;
+  transition: opacity cubic-bezier(0.88, 0, 0.26, 0.98) 0.5s;
 }
 
 .project-related-pagination-wrapper {
@@ -1181,5 +1191,13 @@
       width: 2.625rem;
       opacity: 1;
     }
+  }
+
+  .project-related-item:hover .project-related-item-image--hover {
+    opacity: 1;
+  }
+
+  .project-related-item:hover .project-related-item-image {
+    opacity: 0;
   }
 }
