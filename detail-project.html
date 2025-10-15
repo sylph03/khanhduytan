@@ -79,32 +79,32 @@
   // Template thẻ dự án dùng chung (desktop & mobile)
   function renderProjectCard(project) {
     return `
-        <div class="project-related-item">
-          <img class="project-related-item-image--hover" src="images/detail-project/item-img-2.webp" alt="Image">
-          <img class="project-related-item-overlay" src="images/detail-project/overlay-item.webp" alt="Image">
-          <img class="project-related-item-icon" src="images/detail-project/item-icon.webp" alt="polygon icon">
-          <div class="project-related-item-header">
-            <h2 class="project-related-item-header-number">${project.number}</h2>
-            <p class="project-related-item-header-label">
+        <div class="project-related__item">
+          <img class="project-related__item-image--hover" src="images/detail-project/item-img-2.webp" alt="Image">
+          <img class="project-related__item-overlay" src="images/detail-project/overlay-item.webp" alt="Image">
+          <img class="project-related__item-icon" src="images/detail-project/item-icon.webp" alt="polygon icon">
+          <div class="project-related__item-header">
+            <h2 class="project-related__item-number">${project.number}</h2>
+            <p class="project-related__item-label">
               ${project.label}
             </p>
           </div>
-          <div class="project-related-item-body">
-            <div class="project-related-item-line"></div>
-            <div class="project-related-item-body-content">
-              <h5 class="project-related-item-body-content-title">
+          <div class="project-related__item-body">
+            <div class="project-related__item-line"></div>
+            <div class="project-related__item-content">
+              <h5 class="project-related__item-title">
                 ${project.title}
               </h5>
-              <p class="project-related-item-body-content-description">
+              <p class="project-related__item-description">
                 ${project.description}
               </p>
             </div>
           </div>
-          <a href="${project.link}" class="project-related-item-button">
+          <a href="${project.link}" class="project-related__item-button">
             <p>Chi tiết dự án</p>
             <img src="images/detail-project/arrow-right.webp" alt="Button">
           </a>
-          <img class="project-related-item-image" src="${project.image}" alt="Image">
+          <img class="project-related__item-image" src="${project.image}" alt="Image">
         </div>
     `;
   }
@@ -166,12 +166,12 @@
     const el = document.getElementById('project-info-right');
     if (!el) return;
     el.innerHTML = infoItems.map(item => `
-    <div class="project-info-right-line"></div>
-    <div class="project-info-right-item">
-      <p class="project-info-right-item-label">${item.label}</p>
-      <p class="project-info-right-item-value">${item.value}</p>
+    <div class="project-info__line"></div>
+    <div class="project-info__item">
+      <p class="project-info__item-label">${item.label}</p>
+      <p class="project-info__item-value">${item.value}</p>
     </div>
-  `).join('') + '<div class="project-info-right-line"></div>';
+  `).join('') + '<div class="project-info__line"></div>';
   }
 
   // Khởi tạo khi DOM đã load
@@ -208,22 +208,22 @@
 
     <!-- Project info -->
     <section class="project-info">
-      <div class="project-info-left">
-        <div class="project-info-left-badge">
-          <p class="project-info-left-badge-text">DỰ ÁN XÂY DỰNG</p>
+      <div class="project-info__left">
+        <div class="project-info__badge">
+          <p class="project-info__badge-text">DỰ ÁN XÂY DỰNG</p>
         </div>
-        <div class="project-info-left-content">
-          <h2 class="project-info-left-content-title">
+        <div class="project-info__content">
+          <h2 class="project-info__title">
             Thông tin dự án
             VINWONDER Vũ Yên
           </h2>
-          <h5 class="project-info-left-content-description">
+          <h5 class="project-info__description">
             Khám phá Vinwoder Vũ Yên, nơi sang trọng gặp gỡ những cảnh quan tuyệt đẹp của đường chân trời và thiên
             nhiên.
           </h5>
         </div>
       </div>
-      <div class="project-info-right" id="project-info-right">
+      <div class="project-info__right" id="project-info-right">
         <!-- Nội dung sẽ được render bằng JavaScript -->
       </div>
     </section>
