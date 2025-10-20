@@ -212,6 +212,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 90rem;
+  margin: auto;
 }
 
 .contact__body {
@@ -283,12 +285,14 @@
 }
 
 .contact__right {
-  padding: 0 0 2.88rem 1.25rem;
+  padding: 0 0 2.88rem 0;
 }
 
 .contact__form {
   display: flex;
   flex-direction: column;
+  width: 37.0625rem;
+  margin-left: auto;
 }
 
 .contact__input {
@@ -667,6 +671,15 @@
   .contact__form {
     height: 26.875rem;
     justify-content: space-between;
+    width: 100%;
+  }
+
+  .contact__input {
+    margin: 0;
+  }
+
+  .contact__input input {
+    height: 3.5rem;
   }
 
   .contact__input textarea {
@@ -681,6 +694,10 @@
 
   .contact__button {
     width: 100%;
+  }
+
+  .contact-select {
+    height: 3.5rem;
   }
 
   .contact-select__value-placeholder {
