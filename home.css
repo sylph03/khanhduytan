@@ -150,6 +150,9 @@
   align-items: center;
   align-self: stretch;
 
+  overflow: hidden;
+  position: relative;
+
   margin-bottom: 2.5rem;
 }
 
@@ -210,9 +213,10 @@
 .partners__body {
   display: flex;
   width: 100%;
+  
   /* aspect-ratio: 100/7.375; */
   height: 7.375rem;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   align-items: center;
   position: relative;
   overflow: hidden;
@@ -224,38 +228,38 @@
   bottom: -3.1875rem;
   width: 12.9375rem;
   height: 10.125rem;
-  background: linear-gradient(270deg, #F7F7F7 32.06%, rgba(247, 247, 247, 0.65) 64.02%, rgba(247, 247, 247, 0.00) 100%);
+  background: linear-gradient(90deg, #F7F7F7 32.06%, rgba(247, 247, 247, 0.65) 64.02%, rgba(247, 247, 247, 0.00) 100%);
   z-index: 2;
+  pointer-events: none;
 }
 
 .partners__overlay-right {
   position: absolute;
   right: 0;
-  bottom: -3.1875rem;
+  /* bottom: -3.1875rem; */
+  bottom: 0;
   width: 13.6875rem;
   height: 8.6875rem;
   background: linear-gradient(270deg, #F7F7F7 32.06%, rgba(247, 247, 247, 0.65) 64.72%, rgba(247, 247, 247, 0.00) 100%);
   z-index: 2;
+  pointer-events: none;
 }
 
 .partners__list {
   display: flex;
   align-items: center;
+  gap: 1.5rem;
+  padding-right: 1.5rem;
+  animation: spin 15s infinite linear;
 }
 
-.partners__swiper {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-/* Ensure linear movement for continuous autoplay */
-.swiper-wrapper {
-  transition-timing-function: linear !important;
-}
-
-.swiper-slide {
-  width: auto;
+@keyframes spin {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 .partners__item {
@@ -270,6 +274,7 @@
   background: rgba(255, 255, 255, 0.00);
   /* box-shadow: 8.773px 17.547px 70.187px 0 rgba(0, 0, 0, 0.05); */
   backdrop-filter: blur(35.09334182739258px);
+  flex: 0 0 auto;
 }
 
 .partners__item:last-child {
@@ -1074,6 +1079,11 @@
   .partners__overlay-right {
     display: none;
   }
+  
+  .partners__list {
+    gap: 0;
+    padding-right: 0;
+  }
 
   .partners__item {
     width: auto;
@@ -1220,6 +1230,10 @@
 /* --------------------------------------------desktop------------------------------------------------------ */
 
 @media (min-width: 1024px) {
+  .partners__body:hover .partners__list {
+    animation-play-state: paused;
+  }
+
   .footer__mobile-download:hover {
     background: #1c469a;
   }
