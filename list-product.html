@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sản phẩm/ Dịch vụ lắp đặt</title>
+
+  <!-- Front -->
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Import CSS files -->
+  <link rel="stylesheet" href="okhub-theme/assets/css/_reset.css">
+  <link rel="stylesheet" href="okhub-theme/assets/css/_variables.css">
+  <link rel="stylesheet" href="okhub-theme/assets/css/global.css">
+  <link rel="stylesheet" href="product-service-types.css">
+  <link rel="stylesheet" href="list-product.css">
+
+</head>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+
+    // Custom select
+    const customSelects = document.querySelectorAll('.product-list__filter-sort');
+
+    customSelects.forEach(select => {
+      const trigger = select.querySelector('.product-list__filter-sort-trigger');
+      const options = select.querySelector('.product-list__filter-sort-options');
+      const value = select.querySelector('.product-list__filter-sort-trigger-value');
+      const optionItems = select.querySelectorAll('.product-list__filter-sort-option');
+      const valuePlaceholder = select.querySelector('.product-list__filter-sort-trigger-lable');
+
+      // Toggle dropdown
+      trigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isActive = trigger.classList.contains('active');
+
+        // Close all other selects
+        customSelects.forEach(otherSelect => {
+          if (otherSelect !== select) {
+            otherSelect.querySelector('.product-list__filter-sort-trigger').classList.remove('active');
+            otherSelect.querySelector('.product-list__filter-sort-options').classList.remove('active');
+          }
+        });
+
+        // Toggle current select
+        trigger.classList.toggle('active');
+        options.classList.toggle('active');
+      });
+
+      // Handle option selection
+      optionItems.forEach(option => {
+        option.addEventListener('click', (e) => {
+          e.stopPropagation();
+
+          // Update value
+          value.textContent = option.textContent;
+          value.classList.add('has-value');
+          valuePlaceholder.classList.add('has-value');
+
+          // Update selected state
+          optionItems.forEach(opt => opt.classList.remove('selected'));
+          option.classList.add('selected');
+
+          // Close dropdown
+          trigger.classList.remove('active');
+          options.classList.remove('active');
+
+          // Trigger change event
+          const changeEvent = new Event('change', { bubbles: true });
+          select.dispatchEvent(changeEvent);
+        });
+      });
+
+      // Close on outside click
+      document.addEventListener('click', (e) => {
+        if (!select.contains(e.target)) {
+          trigger.classList.remove('active');
+          options.classList.remove('active');
+        }
+      });
+    });
+
+    // Sample product data
+    const productData = [
+      {
+        id: 1,
+        image: "images/list-product/product.webp",
+        category: "Dây cáp điện",
+        title: "Cáp điện CXV1x240",
+        productCode: "KDT - 843",
+        supplier: "Cadisun",
+        retailPrice: "Liên hệ",
+        projectPrice: "Liên hệ",
+        link: "#"
+      },
+    ];
+
+    // Function to render product list item
+    function renderProductItem(product) {
+      return `
+        <a href="${product.link}" class="product-list__item">
+          <div class="product-list__item-image">
+            <img data-no-lazy="1" src="${product.image}" alt="${product.title}">
+          </div>
+          <div class="product-list__item-info">
+            <div class="product-list__item-info-content">
+              <p class="product-list__item-info-category">
+                ${product.category}
+              </p>
+              <h3 class="product-list__item-info-title">
+                ${product.title}
+              </h3>
+            </div>
+            <div class="product-list__item-info-icon">
+              <img data-no-lazy="1" src="images/list-product/icon_call.webp" alt="Call Icon">
+            </div>
+          </div>
+          <div class="product-list__item-body">
+            <div class="product-list__item-body-list">
+              <div class="product-list__item-body-list-item">
+                <img data-no-lazy="1" class="product-list__item-body-list-item-icon"
+                  src="images/list-product/icon-electric.webp" alt="Electricity Icon">
+                <p class="product-list__item-body-list-item-label">
+                  Mã sản phẩm
+                </p>
+                <p class="product-list__item-body-list-item-value">
+                  ${product.productCode}
+                </p>
+              </div>
+              <div class="product-list__item-body-list-item">
+                <img data-no-lazy="1" class="product-list__item-body-list-item-icon"
+                  src="images/list-product/icon-electric.webp" alt="Electricity Icon">
+                <p class="product-list__item-body-list-item-label">
+                  Hãng cung cấp
+                </p>
+                <p class="product-list__item-body-list-item-value">
+                  ${product.supplier}
+                </p>
+              </div>
+              <div class="product-list__item-body-list-item">
+                <img data-no-lazy="1" class="product-list__item-body-list-item-icon"
+                  src="images/list-product/icon-electric.webp" alt="Electricity Icon">
+                <p class="product-list__item-body-list-item-label">
+                  Giá bán lẻ:
+                </p>
+                <p class="product-list__item-body-list-item-value">
+                  ${product.retailPrice}
+                </p>
+              </div>
+              <div class="product-list__item-body-list-item">
+                <img data-no-lazy="1" class="product-list__item-body-list-item-icon"
+                  src="images/list-product/icon-electric.webp" alt="Electricity Icon">
+                <p class="product-list__item-body-list-item-label">
+                  Giá bán theo dự án
+                </p>
+                <p class="product-list__item-body-list-item-value">
+                  ${product.projectPrice}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="product-list__item-footer">
+            <button class="product-list__item-footer-button--contact">
+              Liên hệ
+            </button>
+            <button class="product-list__item-footer-button--view-detail">
+              Xem chi tiết
+              <img class="product-list__item-footer-button-icon" data-no-lazy="1"
+                src="images/list-product/icon-arrow-right.webp" alt="Arrow Right">
+            </button>
+          </div>
+        </a>
+      `;
+    }
+
+    // Function to render all products
+    function renderProductList(products) {
+      const productListContent = document.querySelector('.product-list__content');
+      if (productListContent) {
+        productListContent.innerHTML = products.map(product => renderProductItem(product)).join('');
+      }
+    }
+
+    // Initialize product list
+    const repeatedProducts = Array.from({ length: 15 }).flatMap((_, i) =>
+      productData.map(p => ({
+        ...p,
+        id: i + 1,
+      }))
+    );
+
+    renderProductList(repeatedProducts);
+
+    // Popup functionality - chỉ đóng mở popup
+    const popupOverlay = document.getElementById('popupOverlay');
+    const popupClose = document.getElementById('popupClose');
+    const sortMobileButton = document.querySelector('.product-list__filter-sort-mobile');
+    const cancelButton = document.querySelector('.popup__footer-button--cancel');
+
+    // Mở popup khi nhấn nút "Sắp xếp"
+    sortMobileButton.addEventListener('click', () => {
+      popupOverlay.classList.add('active');
+    });
+
+    // Đóng popup
+    function closePopup() {
+      popupOverlay.classList.remove('active');
+    }
+
+    // Đóng popup khi nhấn nút X
+    popupClose.addEventListener('click', closePopup);
+
+    // Đóng popup khi nhấn nút "Thoát"
+    cancelButton.addEventListener('click', closePopup);
+
+    // Đóng popup khi nhấn ra ngoài
+    popupOverlay.addEventListener('click', (e) => {
+      if (e.target === popupOverlay) {
+        closePopup();
+      }
+    });
+
+  })
+</script>
+
+<body>
+  <section class="banner">
+
+    <img class="banner__image--desktop" src="images/product-services/bg-banner.webp" alt="Banner">
+    <img class="banner__image--mobile" src="images/product-services/bg-banner-mb.webp" alt="Banner">
+
+    <div class="banner__content">
+      <nav class="breadcrumb font-manrope" aria-label="Breadcrumb">
+        <a href="#" class="breadcrumb__link--inactive">Trang chủ</a>
+        <span class="breadcrumb__separator" aria-hidden="true">/</span>
+        <a href="#" class="breadcrumb__link--inactive">Sản phẩm</a>
+        <span class="breadcrumb__separator" aria-hidden="true">/</span>
+        <span class="breadcrumb__current" aria-current="page">Dây cáp điện</span>
+      </nav>
+      <h2 class="banner__title WEB/H2/M font-lexend">
+        SẢN PHẨM CUNG CẤP, <br> VẬN HÀNH
+      </h2>
+    </div>
+
+    <!-- overlay -->
+    <div class="banner__overlay--top"></div>
+    <div class="banner__overlay--bottom"></div>
+
+  </section>
+
+  <section class="product-list">
+    <div class="product-list__container">
+      <div class="product-list__header">
+        <h2 class="product-list__title">
+          Danh sách sản phẩm
+        </h2>
+        <div class="product-list__filter">
+          <div class="product-list__filter-sort" id="productListSort">
+            <div class="product-list__filter-sort-trigger">
+              <div class="product-list__filter-sort-trigger-lable">
+                sắp xếp theo:<span class="product-list__filter-sort-trigger-value"></span>
+              </div>
+              <img class="product-list__filter-sort-trigger-icon" data-no-lazy="1"
+                src="images/list-product/icon_arrow-down.webp" alt="Arrow Down">
+            </div>
+            <div class="product-list__filter-sort-options">
+              <div class="product-list__filter-sort-option">
+                Giá từ thấp đến cao
+              </div>
+              <div class="product-list__filter-sort-option">
+                Giá từ cao đến thấp
+              </div>
+              <div class="product-list__filter-sort-option">
+                Mới nhất
+              </div>
+              <div class="product-list__filter-sort-option">
+                Cũ nhất
+              </div>
+            </div>
+          </div>
+
+          <!-- sort mobile -->
+          <div class="product-list__filter-sort-mobile">
+            Sắp xếp
+          </div>
+
+          <div class="product-list__filter-search">
+            <input class="product-list__filter-search-input" type="text" placeholder="Bạn quan tâm điều gì?">
+            <button class="product-list__filter-search-icon">
+              <img data-no-lazy=" 1" src="images/list-product/icon-search.webp" alt="Search Icon">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-list__content">
+        <!-- Products will be rendered dynamically by JavaScript -->
+      </div>
+
+      <!-- pagination -->
+      <div class="product-list__pagination">
+        <button class="product-list__pagination-prev">
+          <img data-no-lazy="1" src="images/list-product/icon_arrow-left.webp" alt="Arrow Left">
+        </button>
+        <button class="product-list__pagination-item active">
+          <p class="product-list__pagination-item-text">
+            1
+          </p>
+        </button>
+        <button class="product-list__pagination-item">
+          <p class="product-list__pagination-item-text">
+            2
+          </p>
+        </button>
+        <div class="product-list__pagination-ellipsis">
+          <p class="product-list__pagination-ellipsis-text">
+            •••
+          </p>
+        </div>
+        <button class="product-list__pagination-item">
+          <p class="product-list__pagination-item-text">
+            9
+          </p>
+        </button>
+        <button class="product-list__pagination-next">
+          <img data-no-lazy="1" src="images/list-product/icon_arrow-right.webp" alt="Arrow Right">
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popup for mobile sort -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup" id="popup">
+      <div class="popup__header">
+        <h3 class="popup__header-title">Lọc bởi</h3>
+        <div class="popup__header-close" id="popupClose">
+          <img data-no-lazy="1" src="images/list-product/icon-close.webp" alt="Close">
+        </div>
+      </div>
+      <div class="popup__body">
+        <div class="popup__body-section">
+          <div class="popup__body-section-trigger">Sắp xếp theo</div>
+          <div class="popup__body-section-options">
+            <div class="popup__body-section-option">
+              <p class="popup__body-section-option-text">Giá từ thấp đến cao</p>
+            </div>
+            <div class="popup__body-section-option selected">
+              <p class="popup__body-section-option-text">Giá từ cao đến thấp</p>
+            </div>
+            <div class="popup__body-section-option">
+              <p class="popup__body-section-option-text">Mới nhất</p>
+            </div>
+            <div class="popup__body-section-option">
+              <p class="popup__body-section-option-text">Cũ nhất</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup__footer">
+        <button class="popup__footer-button--filter">
+          <p class="popup__footer-button-text">Lọc kết quả</p>
+          <img class="popup__footer-button-icon" data-no-lazy="1" src="images/list-product/icon-arrow-right.webp" alt="Arrow Right">
+        </button>
+        <button class="popup__footer-button--cancel">
+          <p class="popup__footer-button-text">Thoát</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
