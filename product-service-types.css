@@ -98,13 +98,17 @@
 }
 
 /* ------------ */
+.container {
+  padding: 0 5.0625rem 4.33244rem 5.0625rem;
+}
 
 .distribution {
+  width: 100%;
+  max-width: 90rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.61rem;
-  padding: 0 5.0625rem 4.33244rem 5.0625rem;
-  margin: 5.62rem 0;
+  margin: 5.62rem auto;
 }
 
 .distribution__heading {
@@ -550,6 +554,10 @@
   .breadcrumb__current {
     font-size: 0.75rem;
     font-weight: 600;
+  }
+
+  .container {
+    padding: 0;
   }
 
   .distribution {
